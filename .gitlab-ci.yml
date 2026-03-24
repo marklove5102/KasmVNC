@@ -80,14 +80,12 @@ stages:
         GROUP: 11
       - DISTRO: 'fedora 43'
         GROUP: 12
-      - DISTRO: 'alpine 318'
-        GROUP: 13
-      - DISTRO: 'alpine 319'
-        GROUP: 14
-      - DISTRO: 'alpine 320'
-        GROUP: 15
       - DISTRO: 'alpine 321'
-        GROUP: 16
+        GROUP: 13
+      - DISTRO: 'alpine 322'
+        GROUP: 14
+      - DISTRO: 'alpine 323'
+        GROUP: 15
 
 default:
   retry: 2

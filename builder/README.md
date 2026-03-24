@@ -23,6 +23,41 @@ builder/build-package kali kali-rolling
 builder/build-package fedora thirtythree
 ```
 
+# Build an apk package
+
+## Requirements
+Building an apk package requires a signing key to be present in environment.
+
+For example:
+```sh
+KASMVNC_ALPINE_PRIVATE_KEY=$(cat <<EOF
+-----BEGIN PRIVATE KEY-----
+...
+-----END PRIVATE KEY-----
+EOF
+)
+
+KASMVNC_ALPINE_PUBLIC_KEY=$(cat <<EOF
+-----BEGIN PUBLIC KEY-----
+...
+-----END PUBLIC KEY-----
+EOF
+)
+
+export KASMVNC_ALPINE_PRIVATE_KEY
+export KASMVNC_ALPINE_PUBLIC_KEY
+```
+
+You can create a signing key by using:
+```sh
+apk add abuild
+abuild-keygen -a
+```
+## Building
+```sh
+builder/build-package alpine 321
+```
+
 # Build and test a package
 ```
 builder/build-and-test-deb ubuntu focal

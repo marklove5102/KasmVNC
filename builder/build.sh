@@ -154,6 +154,8 @@ elif [ -d /usr/lib/arm-linux-gnueabihf/dri ]; then
   ln -sfn /usr/lib/arm-linux-gnueabihf/dri dri
 elif [ -d /usr/lib/xorg/modules/dri ]; then
   ln -sfn /usr/lib/xorg/modules/dri dri
+elif [ -d /usr/lib/dri ]; then
+  ln -sfn /usr/lib/dri dri
 else
   ln -sfn /usr/lib64/dri dri
 fi
